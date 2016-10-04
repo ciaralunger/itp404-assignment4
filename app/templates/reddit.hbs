@@ -1,0 +1,15 @@
+<h1>Welcome!!!</h1>
+
+{{#each model as |info|}}
+	<p>Title: 
+	<a href="{{info.data.url}}">{{info.data.title}}</a></p>
+	<p>Score: {{info.data.score}}</p>
+	<p>Number of comments: {{info.data.num_comments}}</p>
+	{{#if info.data.archived}}
+		  Archived
+		{{else}}
+		  Not archived
+	{{/if}}
+{{/each}}
+
+{{outlet}}
